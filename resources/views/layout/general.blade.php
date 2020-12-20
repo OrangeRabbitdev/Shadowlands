@@ -30,7 +30,20 @@
         </nav>
 
         <div class="banner-container">
-            <img src="img/banner/1.jpg">
+            <div>
+                <img src="img/banner/1.jpg">
+                <span class="black-filter"></span>
+            </div>
+            
+            <div class="info-banner">
+                <h2>Optimus Servers</h2>
+                <p>Servidor progresivo (3.3.5a)</p>
+                <div class="timer-count-container">
+                    <h2>FALTAN:</h2>
+                    <p id="timing"></p>
+                </div>
+            </div>
+
         </div>
 
     </div>
@@ -40,6 +53,7 @@
 
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v9.0" nonce="RUW9PdAk"></script>
+    <script src="js/timer.js"></script>
     
 </body>
 </html>

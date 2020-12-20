@@ -8,7 +8,18 @@
     --main-div-second-color:#172228;
     --default-background-color:#171818;
 
-    --main-height-banner:700px;
+    --font-family-heads:"Qualy";
+    --font-family-titles:"Arial";
+
+    --main-font-size-heads:8em;
+    --main-font-size-subtitulos:2em;
+
+    --main-height-banner:800px;
+}
+
+@font-face{
+    font-family: 'Qualy';
+    src: url('../fonts/Qualy.ttf');
 }
 
 .background{
@@ -60,17 +71,24 @@
 
 .banner-container{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
     top: 0;
     width: 100%;
     height: var(--main-height-banner);
     z-index: -1;
+    position: relative;
+    pointer-events: none;
 }
 
-.banner-container img{
+.banner-container div > img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    position: relative;
+    z-index: -1;
 }
 
 .menu-container ul li a{
@@ -80,4 +98,62 @@
 
 .fb-page{
     margin: 4em;
+}
+
+
+
+.banner-container div > span{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 5;
+    top: 0;
+}
+
+.info-banner{
+    display: block;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-banner h2{
+    color: white;
+    text-align: center;
+    font-family: var(--font-family-heads);
+    font-size: 8em;
+}
+
+.info-banner p{
+    color: white;
+    font-family: var(--font-family-titles);
+    font-size: var(--main-font-size-subtitulos);
+    margin-top: 1em;
+}
+
+#timing{
+    display: flex;
+    flex-direction: row;
+}
+
+#timing span{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+    background-color: #252525;
+    border-radius: 5px;
+    border: 2px solid #000;
+    padding: 1em;
 }
